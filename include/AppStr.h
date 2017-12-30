@@ -1,7 +1,6 @@
 #ifndef APPSTR_HEAD
 #define APPSTR_HEAD
 
-#include <iostream>
 #include <cstdlib>
 
 #define AppStr_DEF_SZ 15
@@ -43,11 +42,12 @@ const char* string() const
         return _begin;
 }
 
-void operator += (char ch)
+AppStr& operator << (char ch)
 {
         if(isFull()) expand();
         *_mark++ = ch;
         *_mark = '\0';
+        return *this;
 }
 private:
 void expand();
