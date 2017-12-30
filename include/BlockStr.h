@@ -6,14 +6,16 @@
 class BlockStr
 {
 private:
+
 char* _str;
 public:
 BlockStr(const char* string);
 ~BlockStr();
-const char* getString()
+const char* getString() const
 {
         return _str;
 }
+bool operator ==(const BlockStr& other) const;
 static long getLen(const char* string);
 
 };
