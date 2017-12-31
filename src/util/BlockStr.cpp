@@ -13,6 +13,21 @@ BlockStr::BlockStr(const char* string) : _str(new char[BlockStr::getLen(string) 
         while((*writer++ = *string++)) ;
 }
 
+BlockStr::BlockStr(const BlockStr& other) : _str(new char[BlockStr::getLen(other.getString()) + 1])
+{
+        char* writer = _str;
+        const char* reader = other.getString();
+        while((*writer++ = *reader++)) ;
+}
+
+BlockStr& BlockStr::operator=(const BlockStr& other)
+{
+        _str = new char[BlockStr::getLen(other.getString()) + 1];
+        char* writer = _str;
+        const char* reader = other.getString();
+        while((*writer++ = *reader++)) ;
+        return *this;
+}
 
 BlockStr::~BlockStr()
 {
