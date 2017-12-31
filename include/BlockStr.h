@@ -11,11 +11,17 @@ char* _str;
 public:
 BlockStr(const char* string);
 ~BlockStr();
+
 const char* getString() const
 {
         return _str;
 }
+
 bool operator ==(const BlockStr& other) const;
+bool operator !=(const BlockStr& other) const
+{
+        return !(*this == other);
+}
 static long getLen(const char* string);
 
 };
