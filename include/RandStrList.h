@@ -32,6 +32,11 @@ long getLen(void) const
 {
         return _len;
 }
+
+bool isEmpty(void) const
+{
+        return _len == 0;
+}
 };
 
 #endif

@@ -7,6 +7,7 @@ long BlockStr::getLen(const char* string)
         return total;
 }
 
+
 BlockStr::BlockStr(const char* string) : _str(new char[BlockStr::getLen(string) + 1])
 {
         char* writer = _str;

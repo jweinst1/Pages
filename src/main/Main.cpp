@@ -1,24 +1,8 @@
 #include <iostream>
-#include "RandStrList.h"
+#include "StoryElems.h"
 
 int main(int argc, char const *argv[]) {
-        RandStrList rsl;
-        rsl.push("Hello sir!");
-        rsl.push("yellow!");
-        rsl.push("Red Clowns");
-        rsl.push("ylow!");
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-        std::cout << rsl.get().getString() << std::endl;
-
+        Element elem;
+        std::cout << elem.getName().getString() << std::endl;
         return 0;
 }

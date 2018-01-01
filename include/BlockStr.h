@@ -9,7 +9,8 @@ private:
 
 char* _str;
 public:
-BlockStr(const char* string);
+// default option is empty string
+BlockStr(const char* string = "");
 BlockStr(const BlockStr& other);
 ~BlockStr();
 
