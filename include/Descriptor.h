@@ -6,7 +6,8 @@
 
 class Descriptor
 {
-
+private:
+RandStrList _words;
 };
 
 #endif
