@@ -2,20 +2,20 @@
 #define STORY_ELEMS_HEAD
 //contains stream-like class that continously appends strings to make a story event.
 
-
-class StoryEventNode
-{
-private:
-char* _str;
-public:
-StoryEventNode* next;
-StoryEventNode(const char* string);
-~StoryEventNode();
-}
+#define StoryEvent_DEF_SZ 100
 
 
 class StoryEvent
 {
+private:
+char* _stream;
+char* _mark;
+char* _end;
+public:
+StoryEvent();
+~StoryEvent();
+private:
+void expandBy(long addSize);
 };
 
 #endif
