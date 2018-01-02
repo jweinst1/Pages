@@ -23,6 +23,13 @@ void push(const char* string)
         _len++;
 }
 
+//overload for blockstr's
+void push(const BlockStr& string)
+{
+        _lst.push_back(string);
+        _len++;
+}
+
 const BlockStr& get(void) const
 {
         return _lst[std::rand() % _len];
