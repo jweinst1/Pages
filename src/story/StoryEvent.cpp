@@ -40,6 +40,33 @@ StoryEvent& StoryEvent::operator<<(StoryPart::Type flag)
         return *this;
 }
 
+//inserts output of descriptor object into story event.
+StoryEvent& StoryEvent::operator<<(const Descriptor& desc)
+{
+        DescriptorPath::Type path = DescriptorPath::get();
+        switch(path)
+        {
+        case DescriptorPath::Zero:
+                break;
+        case DescriptorPath::One:
+                *this << StoryPart::Space << desc.get().getString();
+                break;
+        case DescriptorPath::Two:
+                *this << StoryPart::Space
+                      << desc.get().getString()
+                      << StoryPart::Comma
+                      << desc.get().getString();
+                break;
+        case DescriptorPath::Two_And:
+                *this << StoryPart::Space
+                      << desc.get().getString()
+                      << " and "
+                      << desc.get().getString();
+                break;
+        }
+        return *this;
+}
+
 void StoryEvent::expandBy(long addSize)
 {
         long newCap = getCapacity() + addSize;

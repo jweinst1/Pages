@@ -1,14 +1,14 @@
 #include <iostream>
-#include "StoryElems.h"
-#include "Descriptor.h"
-#include "RandomInts.h"
+#include "StoryEvent.h"
 
 int main(int argc, char const *argv[]) {
-        RandomInts<3, 30> numbers;
-        std::cout << numbers.nums[0] << std::endl;
-        std::cout << numbers.nums[1] << std::endl;
-        std::cout << numbers.nums[2] << std::endl;
-        std::cout << numbers.nums[2] << std::endl;
-        std::cout << DescriptorPath::get() << std::endl;
+        Descriptor des;
+        des.push("red");
+        des.push("yellow");
+        des.push("blue");
+        des.push("green");
+        StoryEvent eve;
+        eve << des;
+        std::cout << eve.getString() << std::endl;
         return 0;
 }
