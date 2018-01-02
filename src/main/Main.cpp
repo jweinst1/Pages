@@ -1,8 +1,11 @@
 #include <iostream>
-#include "StoryElems.h"
+#include "StoryEvent.h"
 
 int main(int argc, char const *argv[]) {
-        Element elem;
-        std::cout << elem.getName().getString() << std::endl;
+        StoryEvent eve;
+        eve << "Hello World!" << StoryPart::Space << "Hello world";
+        std::cout << eve.getString() << "\n";
+
+
         return 0;
 }
