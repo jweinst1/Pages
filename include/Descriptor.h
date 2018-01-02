@@ -38,6 +38,11 @@ void push(const BlockStr& string)
         _words.push(string);
 }
 
+const BlockStr& get(void) const
+{
+        return _words.get();
+}
+
 long getLen(void) const
 {
         return _words.getLen();
