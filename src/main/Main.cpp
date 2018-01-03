@@ -18,7 +18,6 @@ int main(int argc, char const *argv[]) {
         StoryEvent eve;
         eve << des;
         eve << actor;
-
         std::cout << des.getName().getString() << std::endl;
         std::cout << eve.getString() << std::endl;
         BlockStr one("foo");

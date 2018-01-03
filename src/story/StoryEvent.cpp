@@ -36,6 +36,9 @@ StoryEvent& StoryEvent::operator<<(StoryPart::Type flag)
         case StoryPart::Space:
                 *_mark++ = ' ';
                 break;
+        case StoryPart::Newline:
+                *_mark++ = '\n';
+                break;
         }
         return *this;
 }

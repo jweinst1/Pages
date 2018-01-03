@@ -16,7 +16,8 @@ struct StoryPart
         {
                 Space,
                 Comma,
-                Period
+                Period,
+                Newline
         };
 };
 
