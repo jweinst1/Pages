@@ -17,6 +17,16 @@ StoryObject(const char* name);
 ~StoryObject()
 {
 }
+// randomly gets one of the objects determiners
+const BlockStr& getDeterminer(void) const
+{
+        return _dets.get();
+}
+
+const BlockStr& getAction(void) const
+{
+        return _actions.get();
+}
 
 void pushDescriptor(const char* string)
 {
@@ -53,7 +63,7 @@ const BlockStr& getName(void) const
         return _name;
 }
 
-const Descriptor& getDescriptor(void) const
+const Descriptor& descriptor(void) const
 {
         return _desc;
 }

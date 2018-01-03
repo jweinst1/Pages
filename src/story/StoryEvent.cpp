@@ -69,7 +69,9 @@ StoryEvent& StoryEvent::operator<<(const Descriptor& desc)
 
 StoryEvent& StoryEvent::operator<<(const StoryObject& sobj)
 {
-
+        *this << sobj.getDeterminer();
+        *this << sobj.descriptor();
+        *this << sobj.getName();
         return *this;
 }
 
