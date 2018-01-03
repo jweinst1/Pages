@@ -24,6 +24,32 @@ void putAction(const BlockStr& name, const StoryAction& action)
 {
         _actions[name] = action;
 }
+
+void putObject(const BlockStr& name, const StoryObject& obj)
+{
+        _objects[name] = obj;
+}
+
+StoryAction& getAction(const BlockStr& name)
+{
+        return _actions[name];
+}
+
+StoryObject& getObject(const BlockStr& name)
+{
+        return _objects[name];
+}
+
+bool hasAction(const BlockStr& name)
+{
+        return _actions.find(name) != _actions.end();
+}
+
+bool hasObject(const BlockStr& name)
+{
+        return _objects.find(name) != _objects.end();
+}
+
 };
 
 #endif
