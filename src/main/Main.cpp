@@ -3,15 +3,16 @@
 #include "StoryEvent.h"
 
 int main(int argc, char const *argv[]) {
-        BlockStr bsss("   Hello!");
         StoryObject des("apple");
+        des.pushDeterminer("the");
+        des.pushDeterminer("one");
         des.pushDescriptor("red");
         des.pushDescriptor("yellow");
         des.pushDescriptor("blue");
         des.pushDescriptor("green");
         StoryEvent eve;
-        eve << des.getDescriptor();
-        eve << bsss;
+        eve << des;
+        std::cout << des.getName().getString() << std::endl;
         std::cout << eve.getString() << std::endl;
         return 0;
 

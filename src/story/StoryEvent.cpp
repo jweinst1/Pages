@@ -64,14 +64,16 @@ StoryEvent& StoryEvent::operator<<(const Descriptor& desc)
                       << desc.get().getString();
                 break;
         }
+
         return *this;
 }
 
 StoryEvent& StoryEvent::operator<<(const StoryObject& sobj)
 {
-        *this << sobj.getDeterminer();
-        *this << sobj.descriptor();
-        *this << sobj.getName();
+        *this << sobj.getDeterminer()
+              << sobj.descriptor()
+              << StoryPart::Space
+              << sobj.getName();
         return *this;
 }
 
