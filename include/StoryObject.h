@@ -45,17 +45,17 @@ void pushAction(const char* string)
 
 bool hasDeterminers(void) const
 {
-        return _dets.isEmpty();
+        return !(_dets.isEmpty());
 }
 
 bool hasDescriptors(void) const
 {
-        return _desc.isEmpty();
+        return !(_desc.isEmpty());
 }
 
 bool hasActions(void) const
 {
-        return _actions.isEmpty();
+        return !(_actions.isEmpty());
 }
 
 const BlockStr& getName(void) const
