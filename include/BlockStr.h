@@ -26,6 +26,8 @@ bool operator !=(const BlockStr& other) const
 {
         return !(*this == other);
 }
+
+friend bool operator <(const BlockStr& lhs, const BlockStr& rhs);
 static long getLen(const char* string);
 
 };

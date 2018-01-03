@@ -30,6 +30,17 @@ BlockStr& BlockStr::operator=(const BlockStr& other)
         return *this;
 }
 
+bool operator<(const BlockStr& lhs, const BlockStr& rhs)
+{
+        long lhsTotal = 0;
+        long rhsTotal = 0;
+        const char* lhsPtr = lhs.getString();
+        const char* rhsPtr = rhs.getString();
+        while(*lhsPtr) lhsTotal += *lhsPtr++;
+        while(*rhsPtr) rhsTotal += *rhsPtr++;
+        return lhsTotal < rhsTotal;
+}
+
 BlockStr::~BlockStr()
 {
         delete[] _str;

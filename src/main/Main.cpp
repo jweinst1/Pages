@@ -20,6 +20,9 @@ int main(int argc, char const *argv[]) {
         eve << actor;
         std::cout << des.getName().getString() << std::endl;
         std::cout << eve.getString() << std::endl;
+        BlockStr one("foo");
+        BlockStr two("doo");
+        std::cout << (one < two) << std::endl;
         return 0;
 
 }
