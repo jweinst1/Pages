@@ -1,8 +1,5 @@
 #include <iostream>
-#include "StoryObject.h"
-#include "StoryAction.h"
-#include "StoryEvent.h"
-#include "StoryMap.h"
+#include "MakeStory.h"
 
 int main(int argc, char const *argv[]) {
         StoryObject des("apple");

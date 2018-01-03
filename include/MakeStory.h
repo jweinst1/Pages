@@ -3,12 +3,14 @@
 // contains procedures for sample stories
 
 #include "StoryMap.h"
+#include "StoryEvent.h"
 
+//used to determine type of story being produced
 struct MakeStoryPath
 {
         enum Type
         {
-
+                one
         };
 };
 
