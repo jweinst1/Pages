@@ -1,14 +1,18 @@
 #include <iostream>
+#include "StoryObject.h"
 #include "StoryEvent.h"
 
 int main(int argc, char const *argv[]) {
-        Descriptor des;
-        des.push("red");
-        des.push("yellow");
-        des.push("blue");
-        des.push("green");
+        BlockStr bsss("   Hello!");
+        StoryObject des("apple");
+        des.pushDescriptor("red");
+        des.pushDescriptor("yellow");
+        des.pushDescriptor("blue");
+        des.pushDescriptor("green");
         StoryEvent eve;
-        eve << des;
+        eve << des.getDescriptor();
+        eve << bsss;
         std::cout << eve.getString() << std::endl;
         return 0;
+
 }

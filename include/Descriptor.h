@@ -43,6 +43,11 @@ const BlockStr& get(void) const
         return _words.get();
 }
 
+bool isEmpty(void) const
+{
+        return _words.isEmpty();
+}
+
 long getLen(void) const
 {
         return _words.getLen();

@@ -3,7 +3,8 @@
 //contains stream-like class that continously appends strings to make a story event.
 
 #include <algorithm>
-#include "Descriptor.h"
+#include "StoryObject.h"
+
 #define StoryEvent_DEF_SZ 100
 
 
@@ -52,10 +53,20 @@ const char* getString(void) const
 
 StoryEvent& operator <<(const char* words);
 
+StoryEvent& operator <<(const BlockStr& words)
+{
+        *this << words.getString();
+        return *this;
+}
+
+
 StoryEvent& operator <<(StoryPart::Type flag);
 
 //inserts output of descriptor object into story event.
 StoryEvent& operator <<(const Descriptor& desc);
+
+//inserts output of story object object into story event.
+StoryEvent& operator <<(const StoryObject& sobj);
 private:
 void expandBy(long addSize);
 };

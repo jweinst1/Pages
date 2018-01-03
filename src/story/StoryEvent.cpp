@@ -67,6 +67,12 @@ StoryEvent& StoryEvent::operator<<(const Descriptor& desc)
         return *this;
 }
 
+StoryEvent& StoryEvent::operator<<(const StoryObject& sobj)
+{
+
+        return *this;
+}
+
 void StoryEvent::expandBy(long addSize)
 {
         long newCap = getCapacity() + addSize;
