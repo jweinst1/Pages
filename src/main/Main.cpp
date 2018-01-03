@@ -2,6 +2,7 @@
 #include "StoryObject.h"
 #include "StoryAction.h"
 #include "StoryEvent.h"
+#include "StoryMap.h"
 
 int main(int argc, char const *argv[]) {
         StoryObject des("apple");
@@ -11,7 +12,6 @@ int main(int argc, char const *argv[]) {
         des.pushDescriptor("yellow");
         des.pushDescriptor("blue");
         des.pushDescriptor("green");
-
         StoryAction actor("shines");
         actor.pushAdverb("brightly");
         actor.pushAdverb("sharply");

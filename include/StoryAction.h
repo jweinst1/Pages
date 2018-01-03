@@ -29,7 +29,7 @@ RandStrList _objects;
 RandStrList _adverbs;
 
 public:
-StoryAction(const char* name);
+StoryAction(const char* name = "");
 ~StoryAction(){
 }
 

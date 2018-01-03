@@ -13,7 +13,7 @@ Descriptor _desc;
 RandStrList _actions;
 BlockStr _name;
 public:
-StoryObject(const char* name);
+StoryObject(const char* name = "");
 ~StoryObject()
 {
 }
