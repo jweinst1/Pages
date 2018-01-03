@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include "StoryObject.h"
+#include "StoryAction.h"
 
 #define StoryEvent_DEF_SZ 100
 
@@ -67,6 +68,9 @@ StoryEvent& operator <<(const Descriptor& desc);
 
 //inserts output of story object object into story event.
 StoryEvent& operator <<(const StoryObject& sobj);
+
+//inserts output of story action object into story event.
+StoryEvent& operator <<(const StoryAction& sact);
 private:
 void expandBy(long addSize);
 };

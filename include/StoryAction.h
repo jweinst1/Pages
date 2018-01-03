@@ -33,6 +33,11 @@ StoryAction(const char* name);
 ~StoryAction(){
 }
 
+const BlockStr& getName(void) const
+{
+        return _name;
+}
+
 bool hasObjects(void) const
 {
         return !(_objects.isEmpty());

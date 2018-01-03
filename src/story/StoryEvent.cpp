@@ -77,6 +77,24 @@ StoryEvent& StoryEvent::operator<<(const StoryObject& sobj)
         return *this;
 }
 
+StoryEvent& StoryEvent::operator<<(const StoryAction& sact)
+{
+        *this << StoryPart::Space;
+        ActionPath::Type path = ActionPath::get();
+        switch(path)
+        {
+        case ActionPath::Adverb:
+                *this << sact.getAdverb()
+                      << StoryPart::Space
+                      << sact.getName();
+                break;
+        case ActionPath::None:
+                *this << sact.getName();
+                break;
+        }
+        return *this;
+}
+
 void StoryEvent::expandBy(long addSize)
 {
         long newCap = getCapacity() + addSize;
