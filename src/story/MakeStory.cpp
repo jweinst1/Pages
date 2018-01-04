@@ -48,7 +48,7 @@ void MakeStory::one(void)
 
         obj2.pushDescriptor("large");
         obj2.pushDescriptor("huge");
-        obj2.pushDescriptor("presitgious");
+        obj2.pushDescriptor("prestigious");
 
         smap.putObject("school", obj2);
 

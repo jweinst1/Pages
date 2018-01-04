@@ -28,3 +28,21 @@ Here, I, a pronoun, and apples, a noun, are objects. They exist as physical enti
 4. This puts an executable called Pages in /bin.
 
 ## Usage
+
+You can specify the number of events to generate.
+
+```
+$ ./bin/Pages 10
+a orange ball cautiously bounces toward a huge and large school.
+a ball bounces toward a small park.
+the dim and dim ball quickly rolls toward a park.
+a round ball bounces toward a huge and large school.
+a pink and orange ball bounces toward a quaint and precious park.
+a gloomy ball cautiously bounces toward a huge, huge school.
+the fluffy ball rolls toward a park.
+a blue, purple ball rolls toward a school.
+a purple ball bounces toward a small and quaint park.
+a gloomy, orange ball quickly rolls toward a prestigious school.
+```
+
+## License
