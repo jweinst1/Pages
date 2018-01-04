@@ -17,10 +17,13 @@ void MakeStory::one(void)
         obj1.pushDescriptor("fluffy");
         obj1.pushDescriptor("purple");
         obj1.pushDescriptor("round");
+        obj1.pushDescriptor("dull");
+        obj1.pushDescriptor("gloomy");
+        obj1.pushDescriptor("dim");
 
         obj1.pushAction("bounces toward");
         //obj1.pushAction("bounces");
-        //obj1.pushAction("rolls toward");
+        obj1.pushAction("rolls toward");
 
         smap.putObject("ball", obj1);
 
@@ -31,6 +34,14 @@ void MakeStory::one(void)
         act1.pushObject("school");
         act1.pushObject("park");
         smap.putAction("bounces toward", act1);
+
+        StoryAction act2("rolls toward");
+        act2.pushAdverb("quickly");
+        act2.pushAdverb("swiftly");
+        act2.pushAdverb("nervously");
+        act2.pushObject("school");
+        act2.pushObject("park");
+        smap.putAction("rolls toward", act2);
 
         StoryObject obj2("school");
         obj2.pushDeterminer("a");
@@ -45,6 +56,8 @@ void MakeStory::one(void)
         obj3.pushDeterminer("a");
 
         obj3.pushDescriptor("small");
+        obj3.pushDescriptor("lush");
+        obj3.pushDescriptor("precious");
         obj3.pushDescriptor("greenish");
         obj3.pushDescriptor("quaint");
 
