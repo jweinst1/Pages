@@ -20,6 +20,12 @@ Here, I, a pronoun, and apples, a noun, are objects. They exist as physical enti
 
 `Pages` uses a framework to pair objects and actions in a grammatically correct manner. It can select and synthesize story events at random.
 
+### Model
+
+This is a model of the object to action bonding.
+
+![Pages Model](/pics/Pages.jpg)
+
 ## Install
 
 1. clone/download the repo.
@@ -46,3 +52,5 @@ a gloomy, orange ball quickly rolls toward a prestigious school.
 ```
 
 ## License
+
+This project is licensed under the Apache 2.0 License
