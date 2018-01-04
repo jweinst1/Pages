@@ -29,7 +29,7 @@ This is a model of the object to action bonding.
 ## Install
 
 1. clone/download the repo.
-2. cd Pages
+2. `cd Pages`
 3. then do `make all`
 4. This puts an executable called Pages in /bin.
 
@@ -57,4 +57,4 @@ This project is licensed under the Apache 2.0 License.
 
 ### Development
 
-`Pages` is a prototype that will be developed into a full story-generator with an input language, making it highly scalable and useful for educaitonal purposes.
+`Pages` is a prototype that will be developed into a full story-generator with an input language, making it highly scalable and useful for educational purposes.
