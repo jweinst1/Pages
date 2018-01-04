@@ -2,6 +2,7 @@
 #define MAKE_STORY_HEAD
 // contains procedures for sample stories
 
+#include <iostream>
 #include "StoryMap.h"
 #include "StoryEvent.h"
 

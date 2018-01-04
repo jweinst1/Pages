@@ -19,8 +19,8 @@ void MakeStory::one(void)
         obj1.pushDescriptor("round");
 
         obj1.pushAction("bounces toward");
-        obj1.pushAction("bounces");
-        obj1.pushAction("rolls toward");
+        //obj1.pushAction("bounces");
+        //obj1.pushAction("rolls toward");
 
         smap.putObject("ball", obj1);
 
@@ -29,6 +29,7 @@ void MakeStory::one(void)
         act1.pushAdverb("slowly");
         act1.pushAdverb("cautiously");
         act1.pushObject("school");
+        act1.pushObject("park");
         smap.putAction("bounces toward", act1);
 
         StoryObject obj2("school");
@@ -40,6 +41,20 @@ void MakeStory::one(void)
 
         smap.putObject("school", obj2);
 
+        StoryObject obj3("park");
+        obj3.pushDeterminer("a");
 
+        obj3.pushDescriptor("small");
+        obj3.pushDescriptor("greenish");
+        obj3.pushDescriptor("quaint");
 
+        smap.putObject("park", obj3);
+
+        event << obj1;
+        const StoryAction& newAction = smap.getAction(obj1.getAction());
+        event << newAction << StoryPart::Space;
+        const StoryObject& newObject = smap.getObject(newAction.getObject());
+        event << newObject;
+        event << StoryPart::Period << StoryPart::Newline;
+        std::cout << event.getString();
 }
