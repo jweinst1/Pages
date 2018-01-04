@@ -53,4 +53,8 @@ a gloomy, orange ball quickly rolls toward a prestigious school.
 
 ## License
 
-This project is licensed under the Apache 2.0 License
+This project is licensed under the Apache 2.0 License.
+
+### Development
+
+`Pages` is a prototype that will be developed into a full story-generator with an input language, making it highly scalable and useful for educaitonal purposes.
